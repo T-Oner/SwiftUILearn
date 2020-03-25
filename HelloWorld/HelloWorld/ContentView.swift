@@ -14,20 +14,12 @@ struct ContentView: View {
     let row: [CalculatorButtonItem] = [.digit(1), .digit(2), .digit(3), .op(.plus)]
     
     var body: some View {
-        HStack {
-            ForEach(row, id: \.self) { item in
-                CalculatorButton(
-                title: item.title,
-                size: item.size,
-                backgroundColorName:
-                item.backgroundColorName)
-                {
-                    print("Button: \(item.title)")
-                }
-                
-            }
+        VStack(spacing: 8) {
+            CalculatorButtonRow(row: [.command(.clear), .command(.flip), .command(.percent), .op(.divide)])
+            CalculatorButtonRow(row: [.digit(1), .digit(2), .digit(3), .op(.plus)])
+            
         }
-       
+        
     }
 }
 
@@ -54,4 +46,19 @@ struct CalculatorButton: View {
                 .cornerRadius(size.width / 2)
         }
     }
+}
+
+struct CalculatorButtonRow: View {
+    let row: [CalculatorButtonItem]
+    
+    var body: some View {
+        HStack {
+            ForEach(row, id: \.self) { item in
+                CalculatorButton(title: item.title, size: item.size, backgroundColorName: item.backgroundColorName) {
+                    print("Button: \(item.title)")
+                }
+            }
+        }
+    }
+    
 }
