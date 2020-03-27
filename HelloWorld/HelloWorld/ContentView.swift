@@ -29,15 +29,20 @@ struct ContentView: View {
                 .lineLimit(1)
             CalculatorButtonPad()
                 .padding(.bottom)
-        }
+        }.scaleEffect(scale)
     }
 }
 
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+            ContentView().previewDevice("iPhone SE")
+        }
     }
 }
+#endif
 
 struct CalculatorButton: View {
     let fontSize: CGFloat = 38
