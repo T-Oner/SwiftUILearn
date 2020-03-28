@@ -17,6 +17,7 @@
 		EC5B115D24227AEA0008D9DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5B115B24227AEA0008D9DA /* LaunchScreen.storyboard */; };
 		EC5B116824227AEA0008D9DA /* HelloWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B116724227AEA0008D9DA /* HelloWorldTests.swift */; };
 		EC5B117324227AEA0008D9DA /* HelloWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B117224227AEA0008D9DA /* HelloWorldUITests.swift */; };
+		EC87658C242F50910082F0C4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC87658B242F50910082F0C4 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 /* Begin PBXFileReference section */
 		EC238278242282A4005749F9 /* CalculatorButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonItem.swift; sourceTree = "<group>"; };
 		EC3F1D6F242EE51800FDDCF1 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
-		EC5B114D24227AE70008D9DA /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC5B114D24227AE70008D9DA /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5B115024227AE70008D9DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC5B115224227AE70008D9DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EC5B115424227AE70008D9DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,12 +48,13 @@
 		EC5B115924227AEA0008D9DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC5B115C24227AEA0008D9DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC5B115E24227AEA0008D9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC5B116324227AEA0008D9DA /* HelloWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC5B116324227AEA0008D9DA /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5B116724227AEA0008D9DA /* HelloWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldTests.swift; sourceTree = "<group>"; };
 		EC5B116924227AEA0008D9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC5B116E24227AEA0008D9DA /* HelloWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC5B116E24227AEA0008D9DA /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5B117224227AEA0008D9DA /* HelloWorldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldUITests.swift; sourceTree = "<group>"; };
 		EC5B117424227AEA0008D9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC87658B242F50910082F0C4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +85,10 @@
 		EC5B114424227AE70008D9DA = {
 			isa = PBXGroup;
 			children = (
-				EC5B114F24227AE70008D9DA /* HelloWorld */,
-				EC5B116624227AEA0008D9DA /* HelloWorldTests */,
-				EC5B117124227AEA0008D9DA /* HelloWorldUITests */,
+				EC87658B242F50910082F0C4 /* Default-568h@2x.png */,
+				EC5B114F24227AE70008D9DA /* Calculator */,
+				EC5B116624227AEA0008D9DA /* CalculatorTests */,
+				EC5B117124227AEA0008D9DA /* CalculatorUITests */,
 				EC5B114E24227AE70008D9DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,14 +96,14 @@
 		EC5B114E24227AE70008D9DA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC5B114D24227AE70008D9DA /* HelloWorld.app */,
-				EC5B116324227AEA0008D9DA /* HelloWorldTests.xctest */,
-				EC5B116E24227AEA0008D9DA /* HelloWorldUITests.xctest */,
+				EC5B114D24227AE70008D9DA /* Calculator.app */,
+				EC5B116324227AEA0008D9DA /* CalculatorTests.xctest */,
+				EC5B116E24227AEA0008D9DA /* CalculatorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EC5B114F24227AE70008D9DA /* HelloWorld */ = {
+		EC5B114F24227AE70008D9DA /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
 				EC5B115024227AE70008D9DA /* AppDelegate.swift */,
@@ -113,7 +116,7 @@
 				EC238278242282A4005749F9 /* CalculatorButtonItem.swift */,
 				EC3F1D6F242EE51800FDDCF1 /* CalculatorBrain.swift */,
 			);
-			path = HelloWorld;
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 		EC5B115824227AEA0008D9DA /* Preview Content */ = {
@@ -124,30 +127,30 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		EC5B116624227AEA0008D9DA /* HelloWorldTests */ = {
+		EC5B116624227AEA0008D9DA /* CalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
 				EC5B116724227AEA0008D9DA /* HelloWorldTests.swift */,
 				EC5B116924227AEA0008D9DA /* Info.plist */,
 			);
-			path = HelloWorldTests;
+			path = CalculatorTests;
 			sourceTree = "<group>";
 		};
-		EC5B117124227AEA0008D9DA /* HelloWorldUITests */ = {
+		EC5B117124227AEA0008D9DA /* CalculatorUITests */ = {
 			isa = PBXGroup;
 			children = (
 				EC5B117224227AEA0008D9DA /* HelloWorldUITests.swift */,
 				EC5B117424227AEA0008D9DA /* Info.plist */,
 			);
-			path = HelloWorldUITests;
+			path = CalculatorUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EC5B114C24227AE70008D9DA /* HelloWorld */ = {
+		EC5B114C24227AE70008D9DA /* Calculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC5B117724227AEA0008D9DA /* Build configuration list for PBXNativeTarget "HelloWorld" */;
+			buildConfigurationList = EC5B117724227AEA0008D9DA /* Build configuration list for PBXNativeTarget "Calculator" */;
 			buildPhases = (
 				EC5B114924227AE70008D9DA /* Sources */,
 				EC5B114A24227AE70008D9DA /* Frameworks */,
@@ -157,14 +160,14 @@
 			);
 			dependencies = (
 			);
-			name = HelloWorld;
+			name = Calculator;
 			productName = HelloWorld;
-			productReference = EC5B114D24227AE70008D9DA /* HelloWorld.app */;
+			productReference = EC5B114D24227AE70008D9DA /* Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EC5B116224227AEA0008D9DA /* HelloWorldTests */ = {
+		EC5B116224227AEA0008D9DA /* CalculatorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC5B117A24227AEA0008D9DA /* Build configuration list for PBXNativeTarget "HelloWorldTests" */;
+			buildConfigurationList = EC5B117A24227AEA0008D9DA /* Build configuration list for PBXNativeTarget "CalculatorTests" */;
 			buildPhases = (
 				EC5B115F24227AEA0008D9DA /* Sources */,
 				EC5B116024227AEA0008D9DA /* Frameworks */,
@@ -175,14 +178,14 @@
 			dependencies = (
 				EC5B116524227AEA0008D9DA /* PBXTargetDependency */,
 			);
-			name = HelloWorldTests;
+			name = CalculatorTests;
 			productName = HelloWorldTests;
-			productReference = EC5B116324227AEA0008D9DA /* HelloWorldTests.xctest */;
+			productReference = EC5B116324227AEA0008D9DA /* CalculatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EC5B116D24227AEA0008D9DA /* HelloWorldUITests */ = {
+		EC5B116D24227AEA0008D9DA /* CalculatorUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC5B117D24227AEA0008D9DA /* Build configuration list for PBXNativeTarget "HelloWorldUITests" */;
+			buildConfigurationList = EC5B117D24227AEA0008D9DA /* Build configuration list for PBXNativeTarget "CalculatorUITests" */;
 			buildPhases = (
 				EC5B116A24227AEA0008D9DA /* Sources */,
 				EC5B116B24227AEA0008D9DA /* Frameworks */,
@@ -193,9 +196,9 @@
 			dependencies = (
 				EC5B117024227AEA0008D9DA /* PBXTargetDependency */,
 			);
-			name = HelloWorldUITests;
+			name = CalculatorUITests;
 			productName = HelloWorldUITests;
-			productReference = EC5B116E24227AEA0008D9DA /* HelloWorldUITests.xctest */;
+			productReference = EC5B116E24227AEA0008D9DA /* CalculatorUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -221,7 +224,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EC5B114824227AE70008D9DA /* Build configuration list for PBXProject "HelloWorld" */;
+			buildConfigurationList = EC5B114824227AE70008D9DA /* Build configuration list for PBXProject "Calculator" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -234,9 +237,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC5B114C24227AE70008D9DA /* HelloWorld */,
-				EC5B116224227AEA0008D9DA /* HelloWorldTests */,
-				EC5B116D24227AEA0008D9DA /* HelloWorldUITests */,
+				EC5B114C24227AE70008D9DA /* Calculator */,
+				EC5B116224227AEA0008D9DA /* CalculatorTests */,
+				EC5B116D24227AEA0008D9DA /* CalculatorUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC5B115D24227AEA0008D9DA /* LaunchScreen.storyboard in Resources */,
+				EC87658C242F50910082F0C4 /* Default-568h@2x.png in Resources */,
 				EC5B115A24227AEA0008D9DA /* Preview Assets.xcassets in Resources */,
 				EC5B115724227AEA0008D9DA /* Assets.xcassets in Resources */,
 			);
@@ -302,12 +306,12 @@
 /* Begin PBXTargetDependency section */
 		EC5B116524227AEA0008D9DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EC5B114C24227AE70008D9DA /* HelloWorld */;
+			target = EC5B114C24227AE70008D9DA /* Calculator */;
 			targetProxy = EC5B116424227AEA0008D9DA /* PBXContainerItemProxy */;
 		};
 		EC5B117024227AEA0008D9DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EC5B114C24227AE70008D9DA /* HelloWorld */;
+			target = EC5B114C24227AE70008D9DA /* Calculator */;
 			targetProxy = EC5B116F24227AEA0008D9DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -451,8 +455,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.toner.HelloWorld;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.toner.calculator;
+				PRODUCT_NAME = Calculator;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -471,8 +475,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.toner.HelloWorld;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.toner.calculator;
+				PRODUCT_NAME = Calculator;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -496,7 +500,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloWorld.app/HelloWorld";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calculator.app/Calculator";
 			};
 			name = Debug;
 		};
@@ -518,7 +522,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloWorld.app/HelloWorld";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calculator.app/Calculator";
 			};
 			name = Release;
 		};
@@ -565,7 +569,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EC5B114824227AE70008D9DA /* Build configuration list for PBXProject "HelloWorld" */ = {
+		EC5B114824227AE70008D9DA /* Build configuration list for PBXProject "Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC5B117524227AEA0008D9DA /* Debug */,
@@ -574,7 +578,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC5B117724227AEA0008D9DA /* Build configuration list for PBXNativeTarget "HelloWorld" */ = {
+		EC5B117724227AEA0008D9DA /* Build configuration list for PBXNativeTarget "Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC5B117824227AEA0008D9DA /* Debug */,
@@ -583,7 +587,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC5B117A24227AEA0008D9DA /* Build configuration list for PBXNativeTarget "HelloWorldTests" */ = {
+		EC5B117A24227AEA0008D9DA /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC5B117B24227AEA0008D9DA /* Debug */,
@@ -592,7 +596,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC5B117D24227AEA0008D9DA /* Build configuration list for PBXNativeTarget "HelloWorldUITests" */ = {
+		EC5B117D24227AEA0008D9DA /* Build configuration list for PBXNativeTarget "CalculatorUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC5B117E24227AEA0008D9DA /* Debug */,
