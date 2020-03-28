@@ -102,7 +102,11 @@ enum CalculatorBarin {
                     return .error
                 }
             case .equal:
-                return self
+                if let result = currentOp.calculate(l: left, r: right) {
+                    return .left(result)
+                } else {
+                    return .error
+                }
             }
         case .error:
             return self
@@ -180,6 +184,7 @@ extension String {
 }
 
 extension CalculatorButtonItem.Op {
+    
     func calculate(l: String, r: String) -> String? {
         guard let left = Double(l), let right = Double(r) else {
             return nil
