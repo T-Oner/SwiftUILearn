@@ -18,14 +18,16 @@ enum CalculatorBarin {
         op: CalculatorButtonItem.Op,
         right: String
     ) //3
+    case equal(value: String)
     case error //4
-
+    
     var output: String {
         let result: String
         switch self {
         case .left(let left): result = left
         case .leftOp(let left, _): result = left
         case .leftOpRight(_, _, let right): result = right
+        case .equal(let value): result = value
         case .error: result = "Error"
         }
         guard let value = Double(result) else {
@@ -50,12 +52,13 @@ enum CalculatorBarin {
     private func apply(num: Int) -> CalculatorBarin {
         switch self {
         case .left(let left):
-            // TODO 此处存在 Bug，如果上次按了等号，接下来输入数字，会直接将数字附在小数后面。因为下面的 extions String 里的 apply 方法存在 bug
             return .left(left.apply(num: num))
         case .leftOp(let left, let op):
             return .leftOpRight(left: left, op: op, right: "0".apply(num: num))
         case .leftOpRight(let left, let op, let right):
             return .leftOpRight(left: left, op: op, right: right.apply(num: num))
+        case .equal(_):
+            return .left("0".apply(num: num))
         case .error:
             return .left("0".apply(num: num))
         }
@@ -69,6 +72,8 @@ enum CalculatorBarin {
             return .leftOpRight(left: left, op: op, right: "0".applyDot())
         case .leftOpRight(let left, let op, let right):
             return .leftOpRight(left: left, op: op, right: right.applyDot())
+        case .equal(_):
+            return .left("0".applyDot())
         case .error:
             return .left("0".applyDot())
         }
@@ -104,10 +109,16 @@ enum CalculatorBarin {
                 }
             case .equal:
                 if let result = currentOp.calculate(l: left, r: right) {
-                    return .left(result)
+                    return .equal(value: result)
                 } else {
                     return .error
                 }
+            }
+        case .equal(let value):
+            switch op {
+            case .plus, .minus, .multiply, .divide:
+                return .leftOp(left: value, op: op)
+            case .equal: return self
             }
         case .error:
             return self
@@ -126,6 +137,8 @@ enum CalculatorBarin {
                 return .leftOpRight(left: left, op: op, right: "-0")
             case .leftOpRight(let left, let op, let right):
                 return .leftOpRight(left: left, op: op, right: right.flipped())
+            case .equal(let value):
+                return .left(value.flipped())
             case .error:
                 return .left("-0")
             }
@@ -137,6 +150,8 @@ enum CalculatorBarin {
                 return self
             case .leftOpRight(let left, let op, let right):
                 return .leftOpRight(left: left, op: op, right: right.percentaged())
+            case .equal(let value):
+                return .left(value.percentaged())
             case .error:
                 return .left("-0")
             }
