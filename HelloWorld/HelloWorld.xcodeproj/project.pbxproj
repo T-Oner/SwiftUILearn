@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC238279242282A4005749F9 /* CalculatorButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC238278242282A4005749F9 /* CalculatorButtonItem.swift */; };
+		EC3F1D70242EE51900FDDCF1 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3F1D6F242EE51800FDDCF1 /* CalculatorBrain.swift */; };
 		EC5B115124227AE70008D9DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B115024227AE70008D9DA /* AppDelegate.swift */; };
 		EC5B115324227AE70008D9DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B115224227AE70008D9DA /* SceneDelegate.swift */; };
 		EC5B115524227AE70008D9DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B115424227AE70008D9DA /* ContentView.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		EC238278242282A4005749F9 /* CalculatorButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonItem.swift; sourceTree = "<group>"; };
+		EC3F1D6F242EE51800FDDCF1 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		EC5B114D24227AE70008D9DA /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5B115024227AE70008D9DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC5B115224227AE70008D9DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				EC5B115E24227AEA0008D9DA /* Info.plist */,
 				EC5B115824227AEA0008D9DA /* Preview Content */,
 				EC238278242282A4005749F9 /* CalculatorButtonItem.swift */,
+				EC3F1D6F242EE51800FDDCF1 /* CalculatorBrain.swift */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				EC5B115124227AE70008D9DA /* AppDelegate.swift in Sources */,
 				EC5B115324227AE70008D9DA /* SceneDelegate.swift in Sources */,
 				EC238279242282A4005749F9 /* CalculatorButtonItem.swift in Sources */,
+				EC3F1D70242EE51900FDDCF1 /* CalculatorBrain.swift in Sources */,
 				EC5B115524227AE70008D9DA /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

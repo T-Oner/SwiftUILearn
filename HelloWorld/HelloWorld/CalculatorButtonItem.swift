@@ -53,7 +53,7 @@ extension CalculatorButtonItem {
         case .digit, .dot:
             return "digitBackground"
         case .op: return "operatorBackground"
-        case .command: return "commandBackground"
+        case .command: return "CalculatorButtonItem.Command"
         }
     }
 }

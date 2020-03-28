@@ -16,7 +16,7 @@ struct ContentView: View {
     let row: [CalculatorButtonItem] = [.digit(1), .digit(2), .digit(3), .op(.plus)]
     
     var body: some View {
-        VStack(alignment: .trailing, spacing: 12) {
+        VStack(spacing: 12) {
             Spacer()
             Text("123484683958035")
                 .font(.system(size: 76))
@@ -50,7 +50,7 @@ struct CalculatorButton: View {
     let size: CGSize
     let backgroundColorName: String
     let action: () -> Void
-    
+
     var body: some View {
         Button(action: action) {
             Text(title)
