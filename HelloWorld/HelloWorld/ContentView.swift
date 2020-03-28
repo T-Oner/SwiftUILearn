@@ -77,6 +77,7 @@ struct CalculatorButtonRow: View {
                     size: item.size,
                     backgroundColorName: item.backgroundColorName) {
                         self.brain = self.brain.apply(item: item)
+                        print(self.brain)
                 }
             }
         }

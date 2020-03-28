@@ -50,6 +50,7 @@ enum CalculatorBarin {
     private func apply(num: Int) -> CalculatorBarin {
         switch self {
         case .left(let left):
+            // TODO 此处存在 Bug，如果上次按了等号，接下来输入数字，会直接将数字附在小数后面。因为下面的 extions String 里的 apply 方法存在 bug
             return .left(left.apply(num: num))
         case .leftOp(let left, let op):
             return .leftOpRight(left: left, op: op, right: "0".apply(num: num))
