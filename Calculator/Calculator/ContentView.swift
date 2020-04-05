@@ -13,12 +13,13 @@ let scale = UIScreen.main.bounds.width / 414
 
 struct ContentView: View {
     
-    @State private var brain: CalculatorBarin = .left("0")
+//    @State private var brain: CalculatorBarin = .left("0")
+    @ObservedObject var model = CalculatorModel()
     
     var body: some View {
         VStack(spacing: 12) {
             Spacer()
-            Text(brain.output)
+            Text(model.brain.output)
                 .font(.system(size: 76))
                 .frame(
                     minWidth: 0,
@@ -27,7 +28,7 @@ struct ContentView: View {
                 .minimumScaleFactor(0.5)
                 .padding(.trailing, 24)
                 .lineLimit(1)
-            CalculatorButtonPad(brain: self.$brain)
+            CalculatorButtonPad(brain: self.$model.brain)
                 .padding(.bottom)
         }.scaleEffect(scale)
     }
