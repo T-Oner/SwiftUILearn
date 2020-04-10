@@ -9,11 +9,6 @@
 import Combine
 
 class CalculatorModel: ObservableObject {
-    let objectWillChange = PassthroughSubject<Void, Never>()
-    var brain: CalculatorBarin = .left("0") {
-        willSet {
-            objectWillChange.send()
-        }
-    }
+    @Published var brain: CalculatorBarin = .left("0")
     
 }
