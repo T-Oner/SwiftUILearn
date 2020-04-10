@@ -10,5 +10,10 @@ import Combine
 
 class CalculatorModel: ObservableObject {
     @Published var brain: CalculatorBarin = .left("0")
+    @Published var history: [CalculatorButtonItem] = []
     
+    func apply(_ item: CalculatorButtonItem) {
+        brain = brain.apply(item: item)
+        history.append(item)
+    }
 }

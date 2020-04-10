@@ -28,7 +28,7 @@ struct ContentView: View {
                 .minimumScaleFactor(0.5)
                 .padding(.trailing, 24)
                 .lineLimit(1)
-            CalculatorButtonPad(brain: self.$model.brain)
+            CalculatorButtonPad(model: self.model)
                 .padding(.bottom)
         }.scaleEffect(scale)
     }
@@ -68,7 +68,8 @@ struct CalculatorButtonRow: View {
     
     let row: [CalculatorButtonItem]
     
-    @Binding var brain: CalculatorBarin
+//    @Binding var brain: CalculatorBarin
+    var model: CalculatorModel
     
     var body: some View {
         HStack {
@@ -77,7 +78,8 @@ struct CalculatorButtonRow: View {
                     title: item.title,
                     size: item.size,
                     backgroundColorName: item.backgroundColorName) {
-                        self.brain = self.brain.apply(item: item)
+                        self.model.apply(item)
+//                        self.brain = self.brain.apply(item: item)
                 }
             }
         }
@@ -87,7 +89,8 @@ struct CalculatorButtonRow: View {
 
 struct CalculatorButtonPad: View {
     
-    @Binding var brain: CalculatorBarin
+//    @Binding var brain: CalculatorBarin
+    var model: CalculatorModel
     
     let pad: [[CalculatorButtonItem]] = [
         [.command(.clear), .command(.flip), .command(.percent), .op(.divide)],
@@ -100,7 +103,7 @@ struct CalculatorButtonPad: View {
     var body: some View {
         VStack(spacing: 8) {
             ForEach(pad, id: \.self) { row in
-                CalculatorButtonRow(row: row, brain: self.$brain)
+                CalculatorButtonRow(row: row, model: self.model)
             }
         }
     }
