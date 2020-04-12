@@ -22,7 +22,7 @@ class CalculatorModel: ObservableObject {
     }
     
     var historyDetail: String {
-        history.map{ $0.description }.joined()
+        return history.map{ $0.description }.joined()
     }
     
     func keepHistory(upTo index: Int) {
@@ -42,7 +42,6 @@ class CalculatorModel: ObservableObject {
 
     var slidingIndex: Float = 0 {
         didSet {
-            print("slidingIndex: \(slidingIndex)")
             keepHistory(upTo: Int(slidingIndex))
         }
     }

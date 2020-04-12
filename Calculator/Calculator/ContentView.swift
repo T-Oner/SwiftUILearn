@@ -12,9 +12,8 @@ import Combine
 let scale = UIScreen.main.bounds.width / 414
 
 struct ContentView: View {
-    
-//    @State private var brain: CalculatorBarin = .left("0")
-    @ObservedObject var model = CalculatorModel()
+
+    @EnvironmentObject var model: CalculatorModel
     
     @State private var editingHistory = false
     
@@ -35,7 +34,7 @@ struct ContentView: View {
                 .minimumScaleFactor(0.5)
                 .padding(.trailing, 24)
                 .lineLimit(1)
-            CalculatorButtonPad(model: self.model)
+            CalculatorButtonPad()
                 .padding(.bottom)
         }.scaleEffect(scale)
     }
@@ -76,7 +75,7 @@ struct CalculatorButtonRow: View {
     let row: [CalculatorButtonItem]
     
 //    @Binding var brain: CalculatorBarin
-    var model: CalculatorModel
+    @EnvironmentObject var model: CalculatorModel
     
     var body: some View {
         HStack {
@@ -96,9 +95,6 @@ struct CalculatorButtonRow: View {
 
 struct CalculatorButtonPad: View {
     
-//    @Binding var brain: CalculatorBarin
-    var model: CalculatorModel
-    
     let pad: [[CalculatorButtonItem]] = [
         [.command(.clear), .command(.flip), .command(.percent), .op(.divide)],
         [.digit(7), .digit(8), .digit(9), .op(.multiply)],
@@ -110,7 +106,7 @@ struct CalculatorButtonPad: View {
     var body: some View {
         VStack(spacing: 8) {
             ForEach(pad, id: \.self) { row in
-                CalculatorButtonRow(row: row, model: self.model)
+                CalculatorButtonRow(row: row)
             }
         }
     }
