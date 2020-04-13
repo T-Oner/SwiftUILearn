@@ -15,6 +15,14 @@
 		ECBD37F32443717200DCBA13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBD37F12443717200DCBA13 /* LaunchScreen.storyboard */; };
 		ECBD37FE2443717200DCBA13 /* PokeMasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD37FD2443717200DCBA13 /* PokeMasterTests.swift */; };
 		ECBD38092443717300DCBA13 /* PokeMasterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD38082443717300DCBA13 /* PokeMasterUITests.swift */; };
+		ECBD381724444BB800DCBA13 /* PokemonInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD381624444BB800DCBA13 /* PokemonInfoRow.swift */; };
+		ECBD381D24444D0100DCBA13 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD381C24444D0100DCBA13 /* Pokemon.swift */; };
+		ECBD381F24444FB800DCBA13 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD381E24444FB800DCBA13 /* Language.swift */; };
+		ECBD3821244451A500DCBA13 /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD3820244451A500DCBA13 /* Ability.swift */; };
+		ECBD38232444548000DCBA13 /* PokemonSpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD38222444548000DCBA13 /* PokemonSpecies.swift */; };
+		ECBD38252444562C00DCBA13 /* AbilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD38242444562C00DCBA13 /* AbilityViewModel.swift */; };
+		ECBD3828244457AF00DCBA13 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD3827244457AF00DCBA13 /* Helpers.swift */; };
+		ECBD382A2444584B00DCBA13 /* PokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD38292444584B00DCBA13 /* PokemonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		ECBD38042443717300DCBA13 /* PokeMasterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokeMasterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBD38082443717300DCBA13 /* PokeMasterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeMasterUITests.swift; sourceTree = "<group>"; };
 		ECBD380A2443717300DCBA13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECBD381624444BB800DCBA13 /* PokemonInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfoRow.swift; sourceTree = "<group>"; };
+		ECBD381C24444D0100DCBA13 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		ECBD381E24444FB800DCBA13 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		ECBD3820244451A500DCBA13 /* Ability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
+		ECBD38222444548000DCBA13 /* PokemonSpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSpecies.swift; sourceTree = "<group>"; };
+		ECBD38242444562C00DCBA13 /* AbilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityViewModel.swift; sourceTree = "<group>"; };
+		ECBD3827244457AF00DCBA13 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		ECBD38292444584B00DCBA13 /* PokemonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,9 @@
 		ECBD37E52443716D00DCBA13 /* PokeMaster */ = {
 			isa = PBXGroup;
 			children = (
+				ECBD38262444579500DCBA13 /* Utils */,
+				ECBD381924444CD100DCBA13 /* Model */,
+				ECBD381824444C7500DCBA13 /* JSON */,
 				ECBD37E62443716D00DCBA13 /* AppDelegate.swift */,
 				ECBD37E82443716D00DCBA13 /* SceneDelegate.swift */,
 				ECBD37EA2443716D00DCBA13 /* ContentView.swift */,
@@ -106,6 +125,7 @@
 				ECBD37F12443717200DCBA13 /* LaunchScreen.storyboard */,
 				ECBD37F42443717200DCBA13 /* Info.plist */,
 				ECBD37EE2443717200DCBA13 /* Preview Content */,
+				ECBD381624444BB800DCBA13 /* PokemonInfoRow.swift */,
 			);
 			path = PokeMaster;
 			sourceTree = "<group>";
@@ -134,6 +154,50 @@
 				ECBD380A2443717300DCBA13 /* Info.plist */,
 			);
 			path = PokeMasterUITests;
+			sourceTree = "<group>";
+		};
+		ECBD381824444C7500DCBA13 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		ECBD381924444CD100DCBA13 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECBD381B24444CE700DCBA13 /* ViewModel */,
+				ECBD381A24444CE100DCBA13 /* DataModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECBD381A24444CE100DCBA13 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				ECBD381C24444D0100DCBA13 /* Pokemon.swift */,
+				ECBD381E24444FB800DCBA13 /* Language.swift */,
+				ECBD3820244451A500DCBA13 /* Ability.swift */,
+				ECBD38222444548000DCBA13 /* PokemonSpecies.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		ECBD381B24444CE700DCBA13 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ECBD38242444562C00DCBA13 /* AbilityViewModel.swift */,
+				ECBD38292444584B00DCBA13 /* PokemonViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ECBD38262444579500DCBA13 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ECBD3827244457AF00DCBA13 /* Helpers.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +331,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECBD381D24444D0100DCBA13 /* Pokemon.swift in Sources */,
+				ECBD381724444BB800DCBA13 /* PokemonInfoRow.swift in Sources */,
 				ECBD37E72443716D00DCBA13 /* AppDelegate.swift in Sources */,
+				ECBD3828244457AF00DCBA13 /* Helpers.swift in Sources */,
+				ECBD3821244451A500DCBA13 /* Ability.swift in Sources */,
+				ECBD38232444548000DCBA13 /* PokemonSpecies.swift in Sources */,
+				ECBD38252444562C00DCBA13 /* AbilityViewModel.swift in Sources */,
+				ECBD382A2444584B00DCBA13 /* PokemonViewModel.swift in Sources */,
+				ECBD381F24444FB800DCBA13 /* Language.swift in Sources */,
 				ECBD37E92443716D00DCBA13 /* SceneDelegate.swift in Sources */,
 				ECBD37EB2443716D00DCBA13 /* ContentView.swift in Sources */,
 			);
