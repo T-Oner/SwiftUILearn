@@ -10,7 +10,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        PokemonInfoRow()
+//        VStack {
+//            PokemonInfoRow(model: PokemonViewModel.sample(id: 1), expanded: false)
+//            PokemonInfoRow(model: PokemonViewModel.sample(id: 21), expanded: true)
+//            PokemonInfoRow(model: PokemonViewModel.sample(id: 25), expanded: false)
+//        }
+//        List(PokemonViewModel.all) { pokemon in
+//            PokemonInfoRow(model: pokemon)
+//        }
+//        ScrollView {
+//            ForEach(PokemonViewModel.all) { pokemon in
+//                PokemonInfoRow(model: pokemon)
+//            }
+//        }
+        PokemonList()
     }
 }
 
