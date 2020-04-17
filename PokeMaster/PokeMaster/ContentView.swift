@@ -23,7 +23,7 @@ struct ContentView: View {
 //                PokemonInfoRow(model: pokemon)
 //            }
 //        }
-        PokemonList()
+        SettingRootView()
     }
 }
 

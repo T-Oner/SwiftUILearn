@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC18C1DF24494ABC00A61AD0 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18C1DE24494ABC00A61AD0 /* SettingView.swift */; };
+		EC18C1E124495E7200A61AD0 /* SettingRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18C1E024495E7200A61AD0 /* SettingRootView.swift */; };
 		EC70C0BC2445C26E007E4641 /* FileHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70C0BB2445C26E007E4641 /* FileHelpers.swift */; };
 		EC70C0BF2445D0BA007E4641 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70C0BE2445D0BA007E4641 /* Sample.swift */; };
 		EC70C0CC2445D76F007E4641 /* ability-65.json in Resources */ = {isa = PBXBuildFile; fileRef = EC70C0CA2445D76F007E4641 /* ability-65.json */; };
@@ -112,6 +114,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC18C1DE24494ABC00A61AD0 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		EC18C1E024495E7200A61AD0 /* SettingRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRootView.swift; sourceTree = "<group>"; };
 		EC70C0BB2445C26E007E4641 /* FileHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelpers.swift; sourceTree = "<group>"; };
 		EC70C0BE2445D0BA007E4641 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		EC70C0CA2445D76F007E4641 /* ability-65.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ability-65.json"; sourceTree = "<group>"; };
@@ -230,9 +234,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC596875244949340009657C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				EC18C1DE24494ABC00A61AD0 /* SettingView.swift */,
+				EC18C1E024495E7200A61AD0 /* SettingRootView.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		EC70C0BD2445D02A007E4641 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EC596875244949340009657C /* Setting */,
 				EC70C164244731DF007E4641 /* Utils */,
 				EC70C16124473189007E4641 /* Panel */,
 				EC70C16024473175007E4641 /* List */,
@@ -657,6 +671,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECBD381D24444D0100DCBA13 /* Pokemon.swift in Sources */,
+				EC18C1E124495E7200A61AD0 /* SettingRootView.swift in Sources */,
 				ECBD381724444BB800DCBA13 /* PokemonInfoRow.swift in Sources */,
 				ECBD37E72443716D00DCBA13 /* AppDelegate.swift in Sources */,
 				EC70C0BC2445C26E007E4641 /* FileHelpers.swift in Sources */,
@@ -666,6 +681,7 @@
 				ECBD38252444562C00DCBA13 /* AbilityViewModel.swift in Sources */,
 				ECBD382A2444584B00DCBA13 /* PokemonViewModel.swift in Sources */,
 				EC70C166244731F0007E4641 /* BlurView.swift in Sources */,
+				EC18C1DF24494ABC00A61AD0 /* SettingView.swift in Sources */,
 				ECBD381F24444FB800DCBA13 /* Language.swift in Sources */,
 				ECBD37E92443716D00DCBA13 /* SceneDelegate.swift in Sources */,
 				EC70C163244731CA007E4641 /* PokemonInfoPanel.swift in Sources */,
