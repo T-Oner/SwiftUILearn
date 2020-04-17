@@ -87,3 +87,9 @@ struct ToolButtonModifier: ViewModifier {
             .frame(width: 30, height: 30)
     }
 }
+
+struct PokemonInfoRow_Previews: PreviewProvider {
+    static var previews: some View {
+        PokemonInfoRow(model: PokemonViewModel.sample(id: 1), expanded: true)
+    }
+}
