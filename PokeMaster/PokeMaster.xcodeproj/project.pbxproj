@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EC18C1DF24494ABC00A61AD0 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18C1DE24494ABC00A61AD0 /* SettingView.swift */; };
 		EC18C1E124495E7200A61AD0 /* SettingRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18C1E024495E7200A61AD0 /* SettingRootView.swift */; };
+		EC18C1E32449D7DC00A61AD0 /* PokemonRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18C1E22449D7DC00A61AD0 /* PokemonRootView.swift */; };
 		EC70C0BC2445C26E007E4641 /* FileHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70C0BB2445C26E007E4641 /* FileHelpers.swift */; };
 		EC70C0BF2445D0BA007E4641 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70C0BE2445D0BA007E4641 /* Sample.swift */; };
 		EC70C0CC2445D76F007E4641 /* ability-65.json in Resources */ = {isa = PBXBuildFile; fileRef = EC70C0CA2445D76F007E4641 /* ability-65.json */; };
@@ -116,6 +117,7 @@
 /* Begin PBXFileReference section */
 		EC18C1DE24494ABC00A61AD0 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		EC18C1E024495E7200A61AD0 /* SettingRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRootView.swift; sourceTree = "<group>"; };
+		EC18C1E22449D7DC00A61AD0 /* PokemonRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRootView.swift; sourceTree = "<group>"; };
 		EC70C0BB2445C26E007E4641 /* FileHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelpers.swift; sourceTree = "<group>"; };
 		EC70C0BE2445D0BA007E4641 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		EC70C0CA2445D76F007E4641 /* ability-65.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ability-65.json"; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 			children = (
 				ECBD381624444BB800DCBA13 /* PokemonInfoRow.swift */,
 				EC70C15324470A5D007E4641 /* PokemonList.swift */,
+				EC18C1E22449D7DC00A61AD0 /* PokemonRootView.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -688,6 +691,7 @@
 				EC70C15424470A5D007E4641 /* PokemonList.swift in Sources */,
 				EC70C16824473208007E4641 /* PokemonInfoPanelHeader.swift in Sources */,
 				EC70C0BF2445D0BA007E4641 /* Sample.swift in Sources */,
+				EC18C1E32449D7DC00A61AD0 /* PokemonRootView.swift in Sources */,
 				ECBD37EB2443716D00DCBA13 /* ContentView.swift in Sources */,
 				EC70C16A24473229007E4641 /* PokemonInfoPanelAbilityList.swift in Sources */,
 			);

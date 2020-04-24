@@ -11,9 +11,12 @@ import SwiftUI
 struct PokemonList: View {
     
     @State var expandingIndex: Int?
+    @State var searchKey: String = ""
     
     var body: some View {
         ScrollView {
+            TextField("搜索", text: $searchKey)
+                .padding(.horizontal)
             ForEach(PokemonViewModel.all) { pokemon in
                 PokemonInfoRow(
                     model: pokemon,
@@ -35,5 +38,11 @@ struct PokemonList: View {
             }
             .edgesIgnoringSafeArea(.bottom)
         )
+    }
+}
+
+struct PokemonList_Previews: PreviewProvider {
+    static var previews: some View {
+        PokemonList()
     }
 }
