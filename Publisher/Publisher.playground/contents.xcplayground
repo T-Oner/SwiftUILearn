@@ -4,5 +4,6 @@
         <page name='Basic'/>
         <page name='Sequence'/>
         <page name='Failure'/>
+        <page name='PublisherType'/>
     </pages>
 </playground>

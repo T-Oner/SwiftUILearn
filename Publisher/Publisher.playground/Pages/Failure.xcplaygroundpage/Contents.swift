@@ -66,6 +66,8 @@ check("Catch and Continue") {
                     }
                     return value
             }
+            .print("[ TryMap ]")
             .catch {_ in Just(-1)}
+            .print("[ Catch ]")
     }
 }
