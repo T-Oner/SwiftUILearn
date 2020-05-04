@@ -9,27 +9,15 @@
 import Foundation
 import SwiftUI
 
-class Settings: ObservableObject {
-    enum AccountBehavior: CaseIterable {
-        case register, login
-    }
-    
-    enum Sorting: CaseIterable {
-        case id, name, color, favorite
-    }
-    
-    @Published var accountBehavior = AccountBehavior.login
-    @Published var email = ""
-    @Published var password = ""
-    @Published var verifyPassword = ""
-    
-    @Published var showEnglishName = true
-    @Published var sorting = Sorting.id
-    @Published var showFavoriteOnly = false
-}
-
 struct SettingView: View {
-    @ObservedObject var settings = Settings()
+    @EnvironmentObject var store: Store
+    var settingsBinding: Binding<AppState.Settings> {
+        $store.appState.settings
+    }
+    var settings: AppState.Settings {
+        store.appState.settings
+    }
+    
     var body: some View {
         Form {
             accountSection
@@ -41,16 +29,16 @@ struct SettingView: View {
     var accountSection: some View {
         Section(header: Text("账户")) {
             Picker(
-                selection: $settings.accountBehavior, label: Text("")
+                selection: settingsBinding.accountBehavior, label: Text("")
             ) {
-                ForEach(Settings.AccountBehavior.allCases, id: \.self) {
+                ForEach(AppState.Settings.AccountBehavior.allCases, id: \.self) {
                     Text($0.text)
                 }
             }.pickerStyle(SegmentedPickerStyle())
-            TextField("电子邮箱", text: $settings.email)
-            SecureField("密码", text: $settings.password)
+            TextField("电子邮箱", text: settingsBinding.email)
+            SecureField("密码", text: settingsBinding.password)
             if settings.accountBehavior == .register {
-                SecureField("确认密码", text: $settings.verifyPassword)
+                SecureField("确认密码", text: settingsBinding.verifyPassword)
             }
             Button(settings.accountBehavior.text) {
                 print("登陆/注册")
@@ -60,15 +48,15 @@ struct SettingView: View {
     
     var optionSection: some View {
         Section(header: Text("选项")) {
-            Toggle(isOn: $settings.showEnglishName) {
+            Toggle(isOn: settingsBinding.showEnglishName) {
                 Text("显示英文名")
             }
-            Picker(selection: self.$settings.sorting, label: Text("排序方式")) {
-                ForEach(Settings.Sorting.allCases, id: \.self) {
+            Picker(selection: self.settingsBinding.sorting, label: Text("排序方式")) {
+                ForEach(AppState.Settings.Sorting.allCases, id: \.self) {
                     Text($0.text)
                 }
             }
-            Toggle(isOn: $settings.showFavoriteOnly) {
+            Toggle(isOn: settingsBinding.showFavoriteOnly) {
                 Text("只显示收藏")
             }
         }
@@ -86,7 +74,7 @@ struct SettingView: View {
     }
 }
 
-extension Settings.AccountBehavior {
+extension AppState.Settings.AccountBehavior {
     var text: String {
         switch self {
         case .login: return "登陆"
@@ -95,7 +83,7 @@ extension Settings.AccountBehavior {
     }
 }
 
-extension Settings.Sorting {
+extension AppState.Settings.Sorting {
     var text: String {
         switch self {
         case .id: return "ID"
