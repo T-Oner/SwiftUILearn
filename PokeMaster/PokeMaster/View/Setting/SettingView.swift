@@ -24,24 +24,43 @@ struct SettingView: View {
             optionSection
             actionSection
         }
+        .alert(item: settingsBinding.loginError) { error in
+            Alert(title: Text(error.localizedDescription))
+        }
     }
     
     var accountSection: some View {
         Section(header: Text("账户")) {
-            Picker(
-                selection: settingsBinding.accountBehavior, label: Text("")
-            ) {
-                ForEach(AppState.Settings.AccountBehavior.allCases, id: \.self) {
-                    Text($0.text)
+            if settings.loginUser == nil {
+                Picker(
+                    selection: settingsBinding.checker.accountBehavior, label: Text("")
+                ) {
+                    ForEach(AppState.Settings.AccountBehavior.allCases, id: \.self) {
+                        Text($0.text)
+                    }
+                }.pickerStyle(SegmentedPickerStyle())
+                TextField("电子邮箱", text: settingsBinding.checker.email)
+                    .foregroundColor(settings.isEmailValid ? .green : .red)
+                SecureField("密码", text: settingsBinding.checker.password)
+                if settings.checker.accountBehavior == .register {
+                    SecureField("确认密码", text: settingsBinding.checker.verifyPassword)
                 }
-            }.pickerStyle(SegmentedPickerStyle())
-            TextField("电子邮箱", text: settingsBinding.email)
-            SecureField("密码", text: settingsBinding.password)
-            if settings.accountBehavior == .register {
-                SecureField("确认密码", text: settingsBinding.verifyPassword)
-            }
-            Button(settings.accountBehavior.text) {
-                print("登陆/注册")
+                if settings.loginRequesting {
+                    Text("登陆中...")
+                } else {
+                    Button(settings.checker.accountBehavior.text) {
+                        self.store.dispatch(
+                            .login(
+                                email: self.settings.checker.email,
+                                password: self.settings.checker.password)
+                        )
+                    }
+                }
+            } else {
+                Text(settings.loginUser!.email)
+                Button("注销") {
+                    print("注销")
+                }
             }
         }
     }
